@@ -128,6 +128,62 @@ SI2410\\ % Course code
 
 \subsection{What is the relationship between the functional integral formalism and
 the n-point correlation function?}
-More text
+General generating functional is given by
+
+\begin{equation}
+Z[J]=\int D\phi \exp \left[i\int d^4x[L+J(x)\phi(x)] \right]
+\end{equation}
+
+where $L$ is the Lagrangian density and $J(x)\phi(x)$ is a source term.
+
+The n-point correlation function is then given by
+
+\begin{equation}
+\left\langle 0 | T \phi (x_1) ... \phi (x_n) | 0 \right\rangle = \dfrac{1}{Z_0} \prod_{i=1}^{n} \parentheses{-i\dfrac{\delta}{\delta J(x_i)} Z[J]}
+\end{equation}
+
+where $Z_0=Z[J=0]$. This yields
+
+\begin{equation}
+\left\langle 0 | T \phi (x_1) ... \phi (x_n) | 0 \right\rangle = \dfrac{\int D\phi \phi(x_1)...\phi(x_n) \exp \left[i\int d^4xL \right]}{\int D\phi \exp \left[i\int d^4xL \right]}
+\end{equation}
+
+\subsection{Given a Lagrangian density, how can the Feynman rules of a theory be
+computed using functional integral formalism?}
+The Feynman rules can be computed by Taylor expanding
+
+\begin{equation}
+\exp iS = \exp \commutator{i \int d^4 x L_0 + L_{int}}
+\end{equation}
+
+where $S$ is the action, $L_0$ is the free Lagrangian density and $L_{int}$ is the interaction Lagrangian density. In the case of $\lambda \phi^4$-theory we have the Lagrangian
+
+\begin{equation}
+L=L_0-\dfrac{\lambda}{4!}\phi^4
+\end{equation}
+
+and by Taylor expansion
+
+\begin{equation}
+\exp iS = \exp \commutator{i \int d^4 x L_0 - \dfrac{\lambda}{4!}\phi^4}= \exp \commutator{i \int d^4 x L_0} \parentheses{1-i\int d^4x \dfrac{\lambda}{4!}\\phi^4+...}
+\end{equation}
+
+where $L_0$ gives the propagators and all terms of order higher than two yields interaction. In this case we read of the vertex factor in momentum space as
+
+\begin{equation}
+-i\lambda (2 \pi)^4 \delta ^{4} \parentheses{\sum p}
+\end{equation}
+
+\subsection{What complications arise when using the functional integral formalism to
+quantize the electromagnetic field? How is it solved?}
+
+\subsection{What are the properties of Grassmann numbers and how are they used to
+quantize spinor fields?}
+
+\subsection{What is the superficial degree of divergence and how can it be computed?
+Use QED as an example.}
+
+\subsection{How does renormalized perturbation theory relate the bare and physical
+masses?}
 
 \end{document}
