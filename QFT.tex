@@ -115,7 +115,8 @@ SI2410\\ % Course code
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
-\author{The whole group}
+\author{David Aceituno, David Blomqvist,
+\\ Fredrik Hanse, Erik Holmgren, Jens Wir\'{e}n}
 \date{\normalsize\today} % Today's date or a custom date
 
 \begin{document}
@@ -153,7 +154,7 @@ computed using functional integral formalism?}
 The Feynman rules can be computed by Taylor expanding
 
 \begin{equation}
-\exp iS = \exp \commutator{i \int d^4 x L_0 + L_{int}}
+\exp [iS] = \exp \commutator{i \int d^4 x L_0 + L_{int}}
 \end{equation}
 
 where $S$ is the action, $L_0$ is the free Lagrangian density and $L_{int}$ is the interaction Lagrangian density. In the case of $\lambda \phi^4$-theory we have the Lagrangian
@@ -184,7 +185,7 @@ is badly divergent as a finite number of terms will have S[A] = 0 due to gauge i
 \begin{equation}
 A_{\mu} \rightarrow A_{\mu} + \frac{1}{e} \partial_{\mu} \alpha (x)
 \end{equation}
-and thus $ A_{\mu} = \frac{1}{e} \partial_{\mu} \alpha (x)$ is equal to $A_{\mu} = 0$. Through the Faddeev-Popov procedure we introduce some gauge fixing function G(A) = 0, this would be G(A) = $\partial_{\mu} A^{\mu}$ in the Lorentz gauge. By inserting $\delta G(A)$ into our functional integral by using,
+and thus $ A_{\mu} = \frac{1}{e} \partial_{\mu} \alpha (x)$ is equal to $A_{\mu} = 0$. Through the Faddeev-Popov procedure we introduce some gauge fixing function G(A) = 0, this would be G(A) = $\partial_{\mu} A^{\mu}$ in the Lorentz gauge. We can insert $\delta G(A)$ into our functional integral by using,
 \begin{equation}
 1 = \int D\alpha ~ \delta(G(A^{\alpha}))det\left[ \frac{\delta G}{\delta \alpha}\right]
 \end{equation}
@@ -240,5 +241,8 @@ where V is the number of vertices and $N_i$ the number of i = photon, electron e
 
 \subsection{How does renormalized perturbation theory relate the bare and physical
 masses?}
+In renormalized perturbation theory we begin by introducing new fields to rescale the original Lagrangian which only contains bare parameters. The next step is to introduce counterterms containing the physical parameters which splits the Lagrangian into two parts where one part now contains all infinities. The final step is to specify renormalization conditions which then fixes the physical parameters such as mass, charge or field strength. 
+
+The common conditions to specify the physical mass is where the pole of the propagator is, in $\lambda \phi^4$-theory this simply implies that $m^2=p^2$ since the propagator is given by $\dfrac{i}{p^2-m^2+i\epsilon}$. This will define the physical mass $m$ as a function of the bare mass $m_0$ and the mass-counterterm $\delta_m$.
 
 \end{document}
