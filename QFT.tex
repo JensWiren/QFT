@@ -176,12 +176,59 @@ where $L_0$ gives the propagators and all terms of order higher than two yields 
 
 \subsection{What complications arise when using the functional integral formalism to
 quantize the electromagnetic field? How is it solved?}
+In QED the functional integral,
+\begin{equation}
+\int DA e^{iS[A]}
+\end{equation}
+is badly divergent as a finite number of terms will have S[A] = 0 due to gauge invariance, 
+\begin{equation}
+A_{\mu} \rightarrow A_{\mu} + \frac{1}{e} \partial_{\mu} \alpha (x)
+\end{equation}
+and thus $ A_{\mu} = \frac{1}{e} \partial_{\mu} \alpha (x)$ is equal to $A_{\mu} = 0$. Through the Faddeev-Popov procedure we introduce some gauge fixing function G(A) = 0, this would be G(A) = $\partial_{\mu} A^{\mu}$ in the Lorentz gauge. By inserting $\delta G(A)$ into our functional integral by using,
+\begin{equation}
+1 = \int D\alpha ~ \delta(G(A^{\alpha}))det\left[ \frac{\delta G}{\delta \alpha}\right]
+\end{equation}
+and a general G given by, $G(A) = \partial^{\mu} A_{\mu} - \omega (x)$ where $\omega$ is some scalar function. This gives as the photon propgator as,
+\begin{equation}
+\tilde{D}^{\mu \nu}_F (k) = \frac{-i}{k^2+i\epsilon} \left( g^{ \mu \nu} - (1-\xi) \frac{k^{\mu}k^{\nu}}{k^2}\right)
+\end{equation}
+where the choice of $\xi$ gives our gauge.
 
 \subsection{What are the properties of Grassmann numbers and how are they used to
 quantize spinor fields?}
+The Grassman numbers are anticommuting numbers with the following properties,
+
+\begin{equation}
+\begin{split}
+\theta \eta = - \eta \theta \\
+\theta^2 = 0 \\
+\int 1 d\theta = 0 \\
+\int \theta d\theta \\
+\int \frac{\partial f}{\partial \theta} d\theta = 0
+\end{split}
+\end{equation}
+
+To quantize spinor fields a grassman valued source field is introduced into $Z[\eta, \bar{\eta}]$ such that, 
+\begin{equation}
+Z[\eta, \bar{\eta}] = \int D \eta \int D \bar{\eta} e^{i\int d^4 x [L + \bar{\eta}\psi+ \bar{\psi}\eta ]}.
+\end{equation}
+A Grassman field is given by,
+\begin{equation}
+\eta (x) = \sum_i \eta_i \phi_i
+\end{equation}
+where $\eta_i$ is a grassman number and $\phi_i$ is a field basis and in the equation above the base is 4-spinor Dirac fields. 
 
 \subsection{What is the superficial degree of divergence and how can it be computed?
 Use QED as an example.}
+The superficial degree of divergence is for a Feynmann diagram's integral defined as,
+\begin{equation}
+D = (\text{power of momenta in numerator} - \text{power of momenta in denominator})
+\end{equation}
+and tells us something about the divergence of a given diagram. In general d-dimensional QED this can be written as,
+\begin{equation}
+D = d + \frac{d-4}{2}V - \frac{d-2}{2}N_{\gamma} - \frac{d-1}{2}N_{e}
+\end{equation} 
+where V is the number of vertices and $N_i$ the number of i = photon, electron external lines. D does not tell us everything about the divergence, three diagrams (c,f and g in fig 10.2 page 318) always diverge, D can only tell us if a given diagram diverge or not if the diagram does not contain any of those three.
 
 \subsection{How does renormalized perturbation theory relate the bare and physical
 masses?}
