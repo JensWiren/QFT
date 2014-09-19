@@ -251,12 +251,41 @@ The common conditions to specify the physical mass is where the pole of the prop
 breaking}
 
 \subsection{What is spontaneous symmetry breaking? Give a concrete example of a spontaneously broken theory.}
+Subcutaneous symmetry breaking occurs when the potential term in the Lagrangian has a minima which is asymmetric with respect to the Lagrangian. Since the ground state is not at zero one needs to re-parametrize the Lagrangian around the minima in order to achieve this but this brakes the symmetry of the Lagrangian.
+
+Consider the linear sigma model which has N symmetries with Lagrangian
+
+\begin{equation}
+L=\dfrac{1}{2}\parentheses{\partial_{\mu}\phi^i}^2 + \mu^2 \parentheses{\phi^i}^2  - \dfrac{\lambda}{4}\left[ \parentheses{\phi^i}^2 \right]
+\end{equation}
+
+where the potential term is
+
+\begin{equation}
+V \parentheses{\phi^i}=- \mu^2 \parentheses{\phi^i}^2 + \dfrac{\lambda}{4}\left[ \parentheses{\phi^i}^2 \right]
+\end{equation}
+
+which has it's minimas at $\parentheses{\phi^i_0}^2=\dfrac{\mu^2}{\lambda}$. Re-parametrizing the Lagrangian around one of this minimas breaks the $N$ symmetries and thus the symmettries are spontaneously broken.
 
 \subsection{What is Goldstone's theorem and its implications?}
+Goldstone's theorem states that every spontaneously broken symmetry with $N$ symmetries give rise to $N-1$ massless particles and $1$ massive.
+
+This implies that spontaneously broken theories can only have one massive particle, e.g. LSW-theory where the only massive particle is the Higgs boson. The $Z$- and $W^\pm$-bosons are massless but are given mass by the Higgs mechanism.
 
 \subsection{What are the reasons that spontaneously broken theories are renormalizable? (Assuming that the un-broken theory is.)}
+Assuming that the unbroken theory is renormalizable the broken theory will also remain renormalizable since the structure of the divergent parts of the Feynman diagrams are unaffected [p.360]. The reparametrization of the Lagrangian will yield several more new divergent diagrams but they all have the same structure and thus all infinities can be absorbed into the same counterterm which renders the broken theory renormalizable as well.
 
 \subsection{What are the basics of Wilson's approach to renormalization?}
+The method of Wilson's approach to renormalization follows the following steps:
+
+\begin{itemize}
+  \item Introduce high momenta cut-off $\Lambda$
+  \item Separate fields into $\hat{\phi}(k)$ where $b\Lambda < |k| < \Lambda$, $0$ otherwise and $\phi(k)$ where $|k|<b\Lambda$, $0$ otherwise and $0<b<1$.
+  \item Integrate out  $\hat{\phi}(k)$ to obtain an effective Lagrangian $L_{eff}$
+  \item Rescale $L_{eff}$ to obtain recursion relations for the coefficients.
+\end{itemize}
+
+
 
 \subsection{What is the Callan-Symanzik equation and how does it relate to the running of physical quantities?}
 
