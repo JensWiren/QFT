@@ -211,7 +211,7 @@ The Grassman numbers are anticommuting numbers with the following properties,
 
 To quantize spinor fields a grassman valued source field is introduced into $Z[\eta, \bar{\eta}]$ such that, 
 \begin{equation}
-Z[\eta, \bar{\eta}] = \int D \eta \int D \bar{\eta} e^{i\int d^4 x [L + \bar{\eta}\psi+ \bar{\psi}\eta ]}.
+Z[\eta, \bar{\eta}] = \int D \psi \int D \bar{\psi} e^{i\int d^4 x [L + \bar{\eta}\psi+ \bar{\psi}\eta ]}.
 \end{equation}
 A Grassman field is given by,
 \begin{equation}
@@ -229,7 +229,7 @@ and tells us something about the divergence of a given diagram. In general d-dim
 \begin{equation}
 D = d + \frac{d-4}{2}V - \frac{d-2}{2}N_{\gamma} - \frac{d-1}{2}N_{e}
 \end{equation} 
-where V is the number of vertices and $N_i$ the number of i = photon, electron external lines. D does not tell us everything about the divergence, three diagrams (c,f and g in Fig. \ref{fig:divergent_diagrams_QED}) always diverge, D can only tell us if a given diagram diverge or not if the diagram does not contain any of those three.
+where V is the number of vertices and $N_i$ the number of i = photon, electron external lines. D does not tell us everything about the divergence, in QED the three diagrams (c,f and g in Fig. \ref{fig:divergent_diagrams_QED}) always diverge, D can only tell us if a given diagram diverge or not if the diagram does not contain any of those three. However for any theory we can always remove the divergent subdiagrams and D holds.
 
 \begin{figure}[hbtp]
 \centering
@@ -241,7 +241,7 @@ where V is the number of vertices and $N_i$ the number of i = photon, electron e
 
 \subsection{How does renormalized perturbation theory relate the bare and physical
 masses?}
-In renormalized perturbation theory we begin by introducing new fields to rescale the original Lagrangian which only contains bare parameters. The next step is to introduce counterterms containing the physical parameters which splits the Lagrangian into two parts where one part now contains all infinities. The final step is to specify renormalization conditions which then fixes the physical parameters such as mass, charge or field strength. 
+In renormalized perturbation theory we begin by introducing new fields to rescale the original Lagrangian which only contains bare parameters. The next step is to introduce counterterms containing the physical parameters which splits the Lagrangian into two parts where one part now contains all infinities. The third step is to specify renormalization conditions which then fixes the physical parameters such as mass, charge or field strength. Finally one computes the Feynman amplitudes while maintaining the renormalization condition which yields the counter terms.
 
 The common conditions to specify the physical mass is where the pole of the propagator is, in $\lambda \phi^4$-theory this simply implies that $m^2=p^2$ since the propagator is given by $\dfrac{i}{p^2-m^2+i\epsilon}$. This will define the physical mass $m$ as a function of the bare mass $m_0$ and the mass-counterterm $\delta_m$.
 
@@ -251,26 +251,29 @@ The common conditions to specify the physical mass is where the pole of the prop
 breaking}
 
 \subsection{What is spontaneous symmetry breaking? Give a concrete example of a spontaneously broken theory.}
-Subcutaneous symmetry breaking occurs when the potential term in the Lagrangian has a minima which is asymmetric with respect to the Lagrangian. Since the ground state is not at zero one needs to re-parametrize the Lagrangian around the minima in order to achieve this but this brakes the symmetry of the Lagrangian.
+Spontaneous symmetry breaking occurs when the potential term in the Lagrangian has more than one minima which is asymmetric with respect to the Lagrangian. One needs to re-parametrize the Lagrangian around the minima in order to achieve this but this brakes the symmetry of the Lagrangian, i.e. the physical system is asymmetric with respect to an arbitrary minima.
 
-Consider the linear sigma model which has N symmetries with Lagrangian
+Consider the linear sigma model which is invariant under $\phi^i \rightarrow R^{ij} \phi^j$ implying that it has N symmetries with Lagrangian,
 
 \begin{equation}
-L=\dfrac{1}{2}\parentheses{\partial_{\mu}\phi^i}^2 + \mu^2 \parentheses{\phi^i}^2  - \dfrac{\lambda}{4}\left[ \parentheses{\phi^i}^2 \right]
+L=\dfrac{1}{2}\parentheses{\partial_{\mu}\phi^i}^2 + \mu^2 \parentheses{\phi^i}^2  - \dfrac{\lambda}{4}\left[ \parentheses{\phi^i}^2 \right]^2
+\label{eq:linearsigma}
 \end{equation}
 
 where the potential term is
 
 \begin{equation}
-V \parentheses{\phi^i}=- \mu^2 \parentheses{\phi^i}^2 + \dfrac{\lambda}{4}\left[ \parentheses{\phi^i}^2 \right]
+V \parentheses{\phi^i}=- \mu^2 \parentheses{\phi^i}^2 + \dfrac{\lambda}{4}\left[ \parentheses{\phi^i}^2 \right]^2
 \end{equation}
 
-which has it's minimas at $\parentheses{\phi^i_0}^2=\dfrac{\mu^2}{\lambda}$. Re-parametrizing the Lagrangian around one of this minimas breaks the $N$ symmetries and thus the symmettries are spontaneously broken.
+which has it's minimas at $\parentheses{\phi^i_0}^2=\dfrac{\mu^2}{\lambda}$. Re-parametrizing the Lagrangian around one of this minimas breaks the $N$ symmetries and thus the symmetries are spontaneously broken.
 
 \subsection{What is Goldstone's theorem and its implications?}
-Goldstone's theorem states that every spontaneously broken symmetry with $N$ symmetries give rise to $N-1$ massless particles and $1$ massive.
+Goldstone's theorem states that every spontaneously broken symmetry give rise to a massless particles. Thus Goldstone's theorem sets an upper bound for the amount of massive particles in our theory.
 
-This implies that spontaneously broken theories can only have one massive particle, e.g. LSW-theory where the only massive particle is the Higgs boson. The $Z$- and $W^\pm$-bosons are massless but are given mass by the Higgs mechanism.
+In the linear sigma model with $N(N-1)/2$ symmetries, $N-1$ symmetries are broken and the same amount of massless particles are created.
+
+(This implies that spontaneously broken theories can only have one massive particle, e.g. LSW-theory where the only massive particle is the Higgs boson. The $Z$- and $W^\pm$-bosons are massless but are given mass by the Higgs mechanism.)
 
 \subsection{What are the reasons that spontaneously broken theories are renormalizable? (Assuming that the un-broken theory is.)}
 Assuming that the unbroken theory is renormalizable the broken theory will also remain renormalizable since the structure of the divergent parts of the Feynman diagrams are unaffected [p.360]. The reparametrization of the Lagrangian will yield several more new divergent diagrams but they all have the same structure and thus all infinities can be absorbed into the same counterterm which renders the broken theory renormalizable as well.
@@ -282,15 +285,19 @@ The method of Wilson's approach to renormalization follows the following steps:
   \item Introduce high momenta cut-off $\Lambda$
   \item Separate fields into $\hat{\phi}(k)$ where $b\Lambda < |k| < \Lambda$, $0$ otherwise and $\phi(k)$ where $|k|<b\Lambda$, $0$ otherwise and $0<b<1$.
   \item Integrate out  $\hat{\phi}(k)$ to obtain an effective Lagrangian $L_{eff}$
-  \item Rescale $L_{eff}$ to obtain recursion relations for the coefficients.
+  \item Rescale $L_{eff}$ to obtain recursion relations for all coefficients in the Lagrangian
+  \item Iterate through the space of all possible Lagrangians until we find a fixpoint
 \end{itemize}
-
-
+During this procedure some parameters will tend towards zero and thus is not relevant for the theory. 
 
 \subsection{What is the Callan-Symanzik equation and how does it relate to the running of physical quantities?}
+Consider a massless theory and introduce the renormalization condition that $p^2=-M^2$ when the dressed (all self-interactions included) propagator is equal to zero. Then the Green's function satisfies the Callan-Symanzik equation
+\begin{equation}
+\commutator{M \dfrac{\partial}{\partial M} + \beta(\lambda) \dfrac{\partial}{\partial \lambda} + n \gamma(\lambda)}G^{(n)}({x_i};M,\lambda)=0
+\end{equation} 
 
+It asserts that there exits two universal functions $\beta(\lambda)$ and $\gamma(\lambda)$, related to the shifts in the coupling constants and field strength, that compensates for the shift in the renormalization scale $M$.
 
-HELLO WORLD!!§
 \subsection{Describe how you would chose suitable renormalization conditions.}
 
 \end{document}
