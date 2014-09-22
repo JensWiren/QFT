@@ -166,7 +166,7 @@ L=L_0-\dfrac{\lambda}{4!}\phi^4
 and by Taylor expansion
 
 \begin{equation}
-\exp iS = \exp \commutator{i \int d^4 x L_0 - \dfrac{\lambda}{4!}\phi^4}= \exp \commutator{i \int d^4 x L_0} \parentheses{1-i\int d^4x \dfrac{\lambda}{4!}\\phi^4+...}
+\exp iS = \exp \commutator{i \int d^4 x \parentheses{L_0 - \dfrac{\lambda}{4!}\phi^4}}= \exp \commutator{i \int d^4 x L_0} \parentheses{1-i\int d^4x \dfrac{\lambda}{4!}\phi^4+...}
 \end{equation}
 
 where $L_0$ gives the propagators and all terms of order higher than two yields interaction. In this case we read of the vertex factor in momentum space as
@@ -181,15 +181,15 @@ In QED the functional integral,
 \begin{equation}
 \int DA e^{iS[A]}
 \end{equation}
-is badly divergent as a finite number of terms will have S[A] = 0 due to gauge invariance, 
+is badly defined because we are redundantly integrating over a continuous infinity of physically equivalent field configurations. This happens when S[A] = 0 due to gauge invariance, 
 \begin{equation}
 A_{\mu} \rightarrow A_{\mu} + \frac{1}{e} \partial_{\mu} \alpha (x)
 \end{equation}
-and thus $ A_{\mu} = \frac{1}{e} \partial_{\mu} \alpha (x)$ is equal to $A_{\mu} = 0$. Through the Faddeev-Popov procedure we introduce some gauge fixing function G(A) = 0, this would be G(A) = $\partial_{\mu} A^{\mu}$ in the Lorentz gauge. We can insert $\delta G(A)$ into our functional integral by using,
+and thus $ A_{\mu} = \frac{1}{e} \partial_{\mu} \alpha (x)$ is equal to $A_{\mu} = 0$. Through the Faddeev-Popov procedure we introduce some gauge fixing function G(A) = 0, this would be G(A) = $\partial_{\mu} A^{\mu}$ in the Lorentz gauge. We can insert a functional delta function $\delta (G(A))$ into our functional integral by using,
 \begin{equation}
 1 = \int D\alpha ~ \delta(G(A^{\alpha}))det\left[ \frac{\delta G}{\delta \alpha}\right]
 \end{equation}
-and a general G given by, $G(A) = \partial^{\mu} A_{\mu} - \omega (x)$ where $\omega$ is some scalar function. This gives as the photon propgator as,
+and a general G given by, $G(A) = \partial^{\mu} A_{\mu} - \omega (x)$ where $\omega$ is some scalar function. This gives the photon propagator as,
 \begin{equation}
 \tilde{D}^{\mu \nu}_F (k) = \frac{-i}{k^2+i\epsilon} \left( g^{ \mu \nu} - (1-\xi) \frac{k^{\mu}k^{\nu}}{k^2}\right)
 \end{equation}
@@ -204,7 +204,7 @@ The Grassman numbers are anticommuting numbers with the following properties,
 \theta \eta = - \eta \theta \\
 \theta^2 = 0 \\
 \int 1 d\theta = 0 \\
-\int \theta d\theta \\
+\int \theta d\theta = 1 \\
 \int \frac{\partial f}{\partial \theta} d\theta = 0
 \end{split}
 \end{equation}
@@ -290,7 +290,7 @@ The method of Wilson's approach to renormalization follows the following steps:
 \subsection{What is the Callan-Symanzik equation and how does it relate to the running of physical quantities?}
 
 
-HELLO WORLD!!
+HELLO WORLD!!§
 \subsection{Describe how you would chose suitable renormalization conditions.}
 
 \end{document}
