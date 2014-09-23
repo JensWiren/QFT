@@ -294,11 +294,31 @@ During this procedure some parameters will tend towards zero and thus is not rel
 Consider a massless theory and introduce the renormalization condition that $p^2=-M^2$ when the dressed (all self-interactions included) propagator is equal to zero. Then the Green's function satisfies the Callan-Symanzik equation
 \begin{equation}
 \commutator{M \dfrac{\partial}{\partial M} + \beta(\lambda) \dfrac{\partial}{\partial \lambda} + n \gamma(\lambda)}G^{(n)}({x_i};M,\lambda)=0
+\label{eq:Callan-Symanzik}
 \end{equation} 
 
 It asserts that there exits two universal functions $\beta(\lambda)$ and $\gamma(\lambda)$, related to the shifts in the coupling constants and field strength, that compensates for the shift in the renormalization scale $M$.
 
+The solution of Eq. \eqref{eq:Callan-Symanzik} can be written as
+
+\begin{equation}
+G^{(2)}(p,\lambda)= \hat{G}\parentheses{\bar{\lambda}(p;\lambda)} \exp \parentheses{- \int _{p'=M}^{p'=p} d \log (p'/M) 2\commutator{1-\gamma \parentheses{\bar{\lambda}(p;\lambda)}}}
+\end{equation}
+where $\hat{G}$ is an unknown function through series expansion and $\bar{\lambda}$ is the running coupling constant and it can be shown that it has to satisfy,
+\begin{equation}
+\frac{d}{d\log(p/M)}\bar{\lambda} (p, \lambda) = \beta (\bar{\lambda}), ~~ \bar{\lambda}(M;\lambda) = \lambda
+\label{eq:RG-equations}
+\end{equation}
+Eq. \eqref{eq:RG-equations} is normally called the renormalization group equation and solving this yields the running constant as function of the momenta and the original coupling constant.
+
 \subsection{Describe how you would chose suitable renormalization conditions.}
+\begin{itemize}
+ \item Maintain original Feynman rules, e.g. propagator, vertex etc.
+ \item Fix the particle mass at the physical mass as opposed to the bare mass, and same for the coupling constant.
+ \item Set 
+\end{itemize}
+
+
 
 \section{Non-Abelian gauge theory}
 
