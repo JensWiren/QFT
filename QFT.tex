@@ -322,11 +322,41 @@ Eq. \eqref{eq:RG-equations} is normally called the renormalization group equatio
 
 \section{Non-Abelian gauge theory}
 
-\subsection{Why does the requirement of gauge invariance imply the existance of a gauge field?}
+\subsection{Why does the requirement of gauge invariance imply the existence of a gauge field?}
+In is possible to have a gauge invariant Lagrangian with vector fields, e.g. QED, but when we are interested in creating theories with higher order vector interactions, specifically containing derivatives of vector fields $\partial_{\mu}A^{\mu}$ we run into trouble. The derivative yields extra terms which breaks the gauge invariance. This can be remedied by introducing the covariant derivative
+
+\begin{equation}
+D_{\mu}\psi(x)= \partial_{\mu}\psi(x)+ieA_{\mu}\psi(x)
+\label{eq:covariantderivative}
+\end{equation}
+The extra term in Eq. \eqref{eq:covariantderivative} exactly cancels the extra term from the "ordinary" derivative, thus making the replacement $\partial_{\mu} \rightarrow D_{\mu}$ remedies our problem, but at the same time forcing us to introduce a new vector field $A_{\mu}$.
 
 \subsection{What representation do the Yang-Mills gauge field strengths transform according to?}
+In the general $SU(N)$ group the covariant derivative transforms as
+
+\begin{equation}
+D_{\mu} \rightarrow V D_{\mu} V^{\dagger}
+\end{equation}
+where $V=\exp \parentheses{if^{abc}t^{c}}$, $f^{abc}$ are structure constants and $t^c$ are the generators of the group. Since $\commutator{D_{\mu}, D_{\nu}}=-igF^{a}_{\mu\nu}t^a$ this implies that 
+the Yang-Mills field tensor has the infinitesimal transformation
+
+\begin{equation}
+F^{a}_{\mu\nu} \rightarrow F^{a}_{\mu\nu} - f^{abc} \alpha^b F^{c}_{\mu\nu}
+\end{equation}
+and that the quantity $-\dfrac{1}{4}\parentheses{F^{a}_{\mu\nu}}^2$ appearing in the Yang-Mills Lagrangian is gauge invariant.
 
 \subsection{What are the Yang-Mills equivalents of the Maxwell equations?}
+The Yang-Mills equivalents of the Maxwell equations are obtained by applying the Euler-Lagrange equations to the Yang-Mills Lagrangian
+
+\begin{equation}
+L_{YM}=-\dfrac{1}{4}\parentheses{F^{a}_{\mu\nu}}^2+\bar{\psi} \parentheses{i \slashed{D}-m} \psi
+\end{equation}
+and are found to be
+
+\begin{equation}
+\partial^{\mu} F^{a}_{\mu\nu} + g f^{abc} A^{b\mu} F^{c}_{\mu\nu} = -gj^{a}_{\nu}
+\end{equation}
+where $j^{a}_{\nu}=\bar{\psi} \gamma_{\nu} t^a \psi$. 
 
 \subsection{What are the Feynman rules for the Yang-Mills Lagrangian?}
 
