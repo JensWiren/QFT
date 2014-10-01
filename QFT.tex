@@ -350,6 +350,7 @@ The Yang-Mills equivalents of the Maxwell equations are obtained by applying the
 
 \begin{equation}
 L_{YM}=-\dfrac{1}{4}\parentheses{F^{a}_{\mu\nu}}^2+\bar{\psi} \parentheses{i \slashed{D}-m} \psi
+\label{eq:Yang-Mills}
 \end{equation}
 and are found to be
 
@@ -359,9 +360,32 @@ and are found to be
 where $j^{a}_{\nu}=\bar{\psi} \gamma_{\nu} t^a \psi$. 
 
 \subsection{What are the Feynman rules for the Yang-Mills Lagrangian?}
+The Feynman rules for the Yang-Mills Lagrangian can be found by expanding the non-Abelian filed tensor in Eq. \eqref{eq:Yang-Mills} and give rise the Feynman rules for the vertices shown in Fig. \ref{fig:Yang-Mills_Feynman_Rules}. The propagators for the fermion and gauge boson respectively are given by
+
+\begin{equation}
+\average{\psi_{i\alpha}(x)\bar{\psi}_{j\beta}(y)} = \int \dfrac{d^4k}{(2\pi)^ 4} \parentheses{ \dfrac{i}{\slashed{k} - m}}_{\alpha\beta} \delta_{ij}e^{-ik\cdot (x-y)}
+\end{equation}
+and 
+
+\begin{equation}
+\average{A_{\mu}^{a}(x)A_{\nu}(b)} = \int \dfrac{d^4k}{(2\pi)^ 4} \parentheses{ \dfrac{-ig_{\mu\nu}}{k^2}} \delta^{ab}e^{-ik\cdot (x-y)}
+\end{equation}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{Non-abelian_Feynman_Rules.png}
+\caption{The Feynman rules for the Yang-Mills Lagrangian.}
+\label{fig:Yang-Mills_Feynman_Rules}
+\end{figure}
 
 \subsection{Why are the coupling constants of the different non-linear terms necessarily equal in Yang-Mills theory?}
+There are two ways to approach this question and the first is more hands on: all interaction terms, i.e. non-linear terms, come from the square of the non-Abelian field strength tensor which was a necessity due to non-Abelian gauge invariance. This implies that there is only one coupling constant involved and thus by construction they all have the same coupling constant. 
+
+The other more technical argument is that we expect the Feynman amplitudes to satisfy Ward identities which corresponds to conservation of symmetry currents. This implies that unphysical polarization states are not produced in scattering processes. If one calculates the simple case of fermion-antifermion annihilation into a pair of gauge bosons there is actually Feynman diagrams containing both the fermion-antifermion-boson vertex and the three-boson vertex. Calculations show that the Ward identity can only be satisfied if the coupling constants of the different vertices are equal.
+
+In the same way the diagram for boson-boson scattering includes both the three- and four-boson vertex and the Ward identity can only be satisfied if the coupling constants are equal. These two scattering processes ensures that the coupling constants are equal for the interactions in Fig. \ref{fig:Yang-Mills_Feynman_Rules}.
 
 \subsection{What are Faddeev-Popov ghost fields?}
+There is a flaw in the previous argument: we had to assume that a gauge boson was transverse and while this is true in QED this it not necessarily true in a Yang-Mills theory. To remedy this Faddeev and Popov introduced ghost fields and ghost terms in the Lagrangian. These ghost field have the wrong relation between spin and statistics and thus only show up as virtual particles and never as physical observable particles, however they also have the consequence of cancelling the unwanted unphysical polarization states.
 
 \end{document}
