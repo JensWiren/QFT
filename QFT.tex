@@ -388,4 +388,63 @@ In the same way the diagram for boson-boson scattering includes both the three- 
 \subsection{What are Faddeev-Popov ghost fields?}
 There is a flaw in the previous argument: we had to assume that a gauge boson was transverse and while this is true in QED this it not necessarily true in a Yang-Mills theory. To remedy this Faddeev and Popov introduced ghost fields and ghost terms in the Lagrangian. These ghost field have the wrong relation between spin and statistics and thus only show up as virtual particles and never as physical observable particles, however they also have the consequence of cancelling the unwanted unphysical polarization states.
 
+
+
+\section{Running of coupling constant in Yang-Mills theory}
+
+\subsection{How does the introduction of Faddeev-Popov ghosts solve the unitary problem?}
+
+REF: page 516, figure 16.6.
+
+The ghost contribution exactly cancels of the contributions of non-physical gauge bosons. In general the ghost particles serve as negative degrees of freedom to cancel the effects of non-physical polarization states of the gauge bosons. (Vi ar inte helt nojda med detta svar, fyll garna i).
+
+\subsection{What diagrams contribute to the gauge boson self-energy}
+
+REF: page 522, figure 16.7
+
+\subsection{Why is the appearence of gauge fixing parameter $\xi$ not a problem for gauge boson selg-energy? }
+
+The fact that the boson self-energy depends on the gauge does not contradict the general theorem that the S-matrix elements are independent of $\xi$. The reason for this is that the full set of one-loop corrections to a gauge theory S-matrix element always involves a number of different \textit{radiative corrections} to vertices and propagators. (at the bottom of page 526) 
+
+\subsection{What is the $\beta$ function of QCD (with the gauge group SU(3))?}
+
+In a general, non-Abelian, gauge theory, the $\beta$ function is given by:
+
+\begin{equation}
+\beta(g) = -\frac{g^3}{(4\pi)^2}\left( \frac{11}{3}C_2(G) - \frac{4}{3}n_fC(r) \right)
+\end{equation}
+where $n_f$ is the number of fermion species in representation $r$, $C(r)$ is the constant from the orthogonality relation:
+
+\begin{equation}
+tr[t^a_rt^b_r] = C(r)\delta^{ab}
+\end{equation}
+which in SU(N) is given by $C(r)= \frac{1}{2}$. Furthermore, $C_2(G)$ is the quadratic Casimir operator of the adjoint representation of the group (group G), which is given by:
+\begin{equation}
+f^{acd}f^{bcd}=C_2(G)\delta^{ab}
+\end{equation}
+which in SU(N) is given by $C_2(N)= \frac{N^2-1}{2N}$. Specifically in SU(3) for QCD $\beta$ is given by
+
+\begin{equation}
+\beta(g) = -\frac{g^3}{(4\pi)^2} \left( 11 - \frac{2}{3}n_f \right)
+\end{equation}
+where $n_f$ is now interpreted as the approximately massless quarks.
+
+\subsection{Describe the running coupling constant of SU(3), SU(2) and U(1) respectively.}
+
+By solving the \textit{Renormalization group eq.} (p. 551, $Q=k$): 
+
+\begin{equation}
+\frac{d}{d(log(\frac{k}{M}))}\bar{g} = \beta(\bar{g}), \;\;\;\; \bar{g}(M;g) = g,
+\end{equation}
+we get the solution (p. 541):
+
+\begin{equation}
+g^2(k) = \frac{g^2}{1 + \frac{g^2}{(4\pi)^2} \left( \frac{11}{3}N - \frac{2}{3}n_f\right)log(\frac{k^2}{M^2}) }
+\end{equation}
+for SU(N). This implies that for a sufficiently small $n_f$ (so that that $\beta$ stays negative) non-Abelian gauge theories are asymptotically free (in other world the coupling constant goes to zero as the momenta increases.)
+
+
+\subsection{How does the renormalization behaviour of QCD depend on the fermion content of the theory?}
+
+
 \end{document}
