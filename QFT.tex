@@ -312,18 +312,12 @@ where $\hat{G}$ is an unknown function through series expansion and $\bar{\lambd
 Eq. \eqref{eq:RG-equations} is normally called the renormalization group equation and solving this yields the running constant as function of the momenta and the original coupling constant.
 
 \subsection{Describe how you would chose suitable renormalization conditions.}
-\begin{itemize}
- \item Maintain original Feynman rules, e.g. propagator, vertex etc.
- \item Fix the particle mass at the physical mass as opposed to the bare mass, and same for the coupling constant.
- \item Set
-\end{itemize}
-
-
+We choose renormalization conditions to fix the particle mass at the physical mass as opposed to the bare mass, same for the coupling constant and other bare quantities.
 
 \section{Non-Abelian gauge theory}
 
 \subsection{Why does the requirement of gauge invariance imply the existence of a gauge field?}
-In is possible to have a gauge invariant Lagrangian with vector fields, e.g. QED, but when we are interested in creating theories with higher order vector interactions, specifically containing derivatives of vector fields $\partial_{\mu}A^{\mu}$ we run into trouble. The derivative yields extra terms which breaks the gauge invariance. This can be remedied by introducing the covariant derivative
+It is possible to have a gauge invariant Lagrangian with vector fields, e.g. QED, but when we are interested in creating theories with higher order vector interactions, specifically containing derivatives of vector fields $\partial_{\mu}A^{\mu}$ we run into trouble. The derivative yields extra terms which breaks the gauge invariance. This can be remedied by introducing the covariant derivative
 
 \begin{equation}
 D_{\mu}\psi(x)= \partial_{\mu}\psi(x)+ieA_{\mu}\psi(x)
@@ -337,7 +331,7 @@ In the general $SU(N)$ group the covariant derivative transforms as
 \begin{equation}
 D_{\mu} \rightarrow V D_{\mu} V^{\dagger}
 \end{equation}
-where $V=\exp \parentheses{if^{abc}t^{c}}$, $f^{abc}$ are structure constants and $t^c$ are the generators of the group. Since $\commutator{D_{\mu}, D_{\nu}}=-igF^{a}_{\mu\nu}t^a$ this implies that 
+where $V=\exp \parentheses{i\alpha^{a}(x)t^{a}}$, where $\alpha(x)$ and $f^{abc}$ are structure constants and $t^a$ are the generators of the group. Since $\commutator{D_{\mu}, D_{\nu}}=-igF^{a}_{\mu\nu}t^a$ this implies that 
 the Yang-Mills field tensor has the infinitesimal transformation
 
 \begin{equation}
@@ -346,7 +340,7 @@ F^{a}_{\mu\nu} \rightarrow F^{a}_{\mu\nu} - f^{abc} \alpha^b F^{c}_{\mu\nu}
 and that the quantity $-\dfrac{1}{4}\parentheses{F^{a}_{\mu\nu}}^2$ appearing in the Yang-Mills Lagrangian is gauge invariant.
 
 \subsection{What are the Yang-Mills equivalents of the Maxwell equations?}
-The Yang-Mills equivalents of the Maxwell equations are obtained by applying the Euler-Lagrange equations to the Yang-Mills Lagrangian
+The Yang-Mills equivalents of the Maxwell equations are obtained by applying the Euler-Lagrange equations with respect to $A^{\mu}$ to the Yang-Mills Lagrangian
 
 \begin{equation}
 L_{YM}=-\dfrac{1}{4}\parentheses{F^{a}_{\mu\nu}}^2+\bar{\psi} \parentheses{i \slashed{D}-m} \psi
@@ -357,7 +351,17 @@ and are found to be
 \begin{equation}
 \partial^{\mu} F^{a}_{\mu\nu} + g f^{abc} A^{b\mu} F^{c}_{\mu\nu} = -gj^{a}_{\nu}
 \end{equation}
-where $j^{a}_{\nu}=\bar{\psi} \gamma_{\nu} t^a \psi$. 
+where $j^{a}_{\nu}=\bar{\psi} \gamma_{\nu} t^a \psi$. Eq. \eqref{eq:Yang-Mills} can be rewritten as
+
+\begin{equation}
+\parentheses{D^{\mu} F_{\mu\nu}}^a = -g j_{\nu}^{a}
+\end{equation}
+which in the homogeneous case is called the Bianchi identity
+
+\begin{equation}
+\epsilon^{\mu\nu\lambda\sigma} \parentheses{D_{\nu} F_{\lambda\sigma}}^a = 0
+\end{equation}
+and are non-Abelian equivalence of the homogeneous Maxwell equation.
 
 \subsection{What are the Feynman rules for the Yang-Mills Lagrangian?}
 The Feynman rules for the Yang-Mills Lagrangian can be found by expanding the non-Abelian filed tensor in Eq. \eqref{eq:Yang-Mills} and give rise the Feynman rules for the vertices shown in Fig. \ref{fig:Yang-Mills_Feynman_Rules}. The propagators for the fermion and gauge boson respectively are given by
@@ -368,7 +372,7 @@ The Feynman rules for the Yang-Mills Lagrangian can be found by expanding the no
 and 
 
 \begin{equation}
-\average{A_{\mu}^{a}(x)A_{\nu}(b)} = \int \dfrac{d^4k}{(2\pi)^ 4} \parentheses{ \dfrac{-ig_{\mu\nu}}{k^2}} \delta^{ab}e^{-ik\cdot (x-y)}
+\average{A_{\mu}^{a}(x)A_{\nu}^{b}(y)} = \int \dfrac{d^4k}{(2\pi)^ 4} \parentheses{ \dfrac{-ig_{\mu\nu}}{k^2}} \delta^{ab}e^{-ik\cdot (x-y)}
 \end{equation}
 
 \begin{figure}[hbtp]
@@ -386,9 +390,29 @@ The other more technical argument is that we expect the Feynman amplitudes to sa
 In the same way the diagram for boson-boson scattering includes both the three- and four-boson vertex and the Ward identity can only be satisfied if the coupling constants are equal. These two scattering processes ensures that the coupling constants are equal for the interactions in Fig. \ref{fig:Yang-Mills_Feynman_Rules}.
 
 \subsection{What are Faddeev-Popov ghost fields?}
-There is a flaw in the previous argument: we had to assume that a gauge boson was transverse and while this is true in QED this it not necessarily true in a Yang-Mills theory. To remedy this Faddeev and Popov introduced ghost fields and ghost terms in the Lagrangian. These ghost field have the wrong relation between spin and statistics and thus only show up as virtual particles and never as physical observable particles, however they also have the consequence of cancelling the unwanted unphysical polarization states.
+There is a flaw in the previous argument: we had to assume that a gauge boson was transverse and while this is true in QED this it not necessarily true in a Yang-Mills theory. The Faddeev-Popov procedure 
+\begin{equation}
+1 = \int D\alpha ~ \delta(G(A^{\alpha}))det\left[ \frac{\delta G}{\delta \alpha}\right]
+\end{equation}
+
+give rise to extra terms in the non-Abelian case
+\begin{equation}
+\frac{\delta G(A^{\alpha})}{\delta \alpha} = \dfrac{1}{g} \partial^{\mu} D_{\mu} 
+\end{equation}
+which give rise to a ghost Lagrangian
+
+\begin{equation}
+L_{ghost}=\bar{c}^a \parentheses{-\partial^2 \delta^{ac} -g \delta^{\mu} f^{abc} A^b_{\mu}}c^c
+\end{equation}
+These ghost field have the wrong relation between spin and statistics and thus only show up as virtual particles and never as physical observable particles, however they also have the consequence of cancelling the unwanted unphysical polarization states.
 
 
+
+\subsection{Questions}
+\begin{itemize}
+\item Covariant derivative and Christoffel symbols?
+\item Differences in Feynman rules for the non-Abelian vertices
+\end{itemize}
 
 \section{Running of coupling constant in Yang-Mills theory}
 
@@ -396,7 +420,7 @@ There is a flaw in the previous argument: we had to assume that a gauge boson wa
 
 REF: page 516, figure 16.6.
 
-The ghost contribution exactly cancels of the contributions of non-physical gauge bosons. In general the ghost particles serve as negative degrees of freedom to cancel the effects of non-physical polarization states of the gauge bosons. (Vi ar inte helt nojda med detta svar, fyll garna i).
+The ghost contribution exactly cancels of the contributions of non-physical gauge bosons. In general the ghost particles serve as negative degrees of freedom to cancel the effects of non-physical polarization states of the gauge bosons.
 
 \subsection{What diagrams contribute to the gauge boson self-energy?}
 See Fig. \ref{fig:Gauge_Boson_Self-Energy}.
@@ -410,7 +434,7 @@ See Fig. \ref{fig:Gauge_Boson_Self-Energy}.
 
 \subsection{Why is the appearence of gauge fixing parameter $\xi$ not a problem for gauge boson selg-energy? }
 
-The fact that the boson self-energy depends on the gauge does not contradict the general theorem that the S-matrix elements are independent of $\xi$. The reason for this is that the full set of one-loop corrections to a gauge theory S-matrix element always involves a number of different \textit{radiative corrections} to vertices and propagators. (at the bottom of page 526) 
+The fact that the boson self-energy depends on the gauge does not contradict the general theorem that the S-matrix elements are independent of $\xi$. The reason for this is that the full set of one-loop corrections to a gauge theory S-matrix element always involves a number of different \textit{radiative corrections} to vertices and propagators, the gauge dependence cancels in an intrcate fashion. (at the bottom of page 526) 
 
 \subsection{What is the $\beta$ function of QCD (with the gauge group SU(3))?}
 
@@ -451,6 +475,17 @@ for SU(N). This implies that for a sufficiently small $n_f$ (so that that $\beta
 
 
 \subsection{How does the renormalization behaviour of QCD depend on the fermion content of the theory?}
+The $\beta$-function is, to one-loop order, a sum of the coefficients of the logarithmic divergences of the counter terms which is determined by renormalisation (PoS Eq. (12.54)). In SU(3) for QCD $\beta$ is given by
 
+\begin{equation}
+\beta(g) = -\frac{g^3}{(4\pi)^2} \left( 11 - \frac{2}{3}n_f \right)
+\end{equation}
+which implies that if $n_{f}>16$, QCD is no longer asymptotically free. 
+
+
+\subsection{Questions}
+\begin{itemize}
+\item Which are fermion species? Ghost?
+\end{itemize}
 
 \end{document}
