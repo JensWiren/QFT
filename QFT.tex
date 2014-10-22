@@ -547,16 +547,24 @@ Is the ghost vertex independent of the field strength tensor? Not Yang-Mills ten
 When a symmetry is broken by expanding our fields around a new non-zero VEV the covariant derivative gets a term proportional to this new VEV and the square of the gauge boson. This new term is interpreted as a massterm for our previously massless gauge-boson.
 Consider for example a field $\phi$ with VEV $\phi_0 \neq 0$, then the covariant derivative term, $|D_{\mu} \phi|^2$, will contain, $\Delta L = \frac{1}{2}m_A^2 A_{\mu}A^{\mu} = e^2 \phi_0^2 A_{\mu}A^{\mu}$ which is the new massterm for the gauge boson.
 ref. p690-691
+
 \subsection*{How can SSB produce a gauge boson mass without violating local gauge invariance?}
 In general the mass-term can be written as the matrix,
 \begin{equation}
 m^2_{ab} = g^2(T^a\phi_0)_i(T^b \phi_0)_i
 \end{equation}
 if some particular generator $T^a$ of our gauge group G leave the vacuum invariant, ie $T^a\phi_0 = 0$, the corresponding gauge boson will remain massless.
-If we now specifically consider SU(2) we will have three generators and the VEV will reside on a spherical surface in the $(\phi_1, \phi_2, \phi_3)$-space, we can then choose our coordinates in such a way that this leaves the $T^3$ generator massless and we retain a gauge invariance with rotations around the $\phi_3$-axis as shown in figure 20.1 page 695.
-ref. 694-697
-\subsection*{Why does the Higgs mechanism break both the SU(2) and U(1) synnetries of GWS theory and what is the remaining symmetry?}
-The GWS has the symmetry $SU_W(2) \times U_Y(1)$ which gives us the complete gauge transformation,
+If we now specifically consider SU(2) we will have three generators and the VEV will reside on a spherical surface in the $(\phi_1, \phi_2, \phi_3)$-space, we can then choose our coordinates in such a way that this leaves the $T^3$ generator massless and we retain a gauge invariance with rotations around the $\phi_3$-axis as shown in Fig. \ref{fig:SSB_SU2}.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{SSB_SU2.png}
+\caption{The space of configurations for a scalar field in the vector representation of $SU(2)$.}
+\label{fig:SSB_SU2}
+\end{figure}
+
+\subsection*{Why does the Higgs mechanism break both the SU(2) and U(1) symmetries of GWS theory and what is the remaining symmetry?}
+The GWS has the symmetry $SU_L(2) \times U_Y(1)$ which gives us the complete gauge transformation,
 \begin{equation}
 \phi = e^{i\alpha ^a \tau ^a} e^{\frac{i}{2}\beta} \phi
 \end{equation}
@@ -572,18 +580,18 @@ will leave $\phi_0$ unchanged. Thus the gauge theory will contain one massless g
 ref.700-701
 The remaining symmetry is the $U_{EM}(1)$ symmetry, so in total the breaking occurs according to,
 \begin{equation}
-SU_W(2) \times U_Y(1) \rightarrow U_{EM}(1)
+SU_L(2) \times U_Y(1) \rightarrow U_{EM}(1)
 \end{equation}
 \subsection*{How is it possible to ensure that SU(2) gauge bosons only couple to the left-handed fermions?}
-In GWS theory we have $SU_W(2) \times U_Y(1)$ and can construct the covariant derivative, 
+In GWS theory we have $SU_L(2) \times U_Y(1)$ and can construct the covariant derivative, 
 \begin{equation}
 D_{\mu} = \partial_{\mu} - igA_{\mu}^aT^a-ig'YB_{\mu}
 \end{equation}
-we can then make our left handed fermions a doublet under the $SU_W(2)$ symmetry according to,
+we can then make our left handed fermions a doublet under the $SU_L(2)$ symmetry according to,
 \begin{equation}
 E_L = {\nu_e \choose e^-}_L
 \end{equation}
-and right handed fermions singlets in the same group. By the same arguments as earlier we can then assign $T^3 = 0$ and thus the $SU_W(2)$ gauge bosons will not interact with right handed fermions.
+and right handed fermions singlets in the same group. By the same arguments as earlier we can then assign $T^3 = 0$ and thus the $SU_L(2)$ gauge bosons will not interact with right handed fermions.
 ref. 702-704
 
 
